@@ -14,12 +14,12 @@ public class Counter {
 
 	// method decrements _ctr
 	public void decrement() {
-		_ctr--; // faulty decrement
+		_ctr++; // faulty decrement
 	}
 
 	// method resets _ctr
 	public void reset() {
-		_ctr = 0; // faulty reset, _ctr should rather be 0
+		_ctr = 1; // faulty reset, _ctr should rather be 0
 	}
 
 	// method multiplies _ctr by n
@@ -30,13 +30,16 @@ public class Counter {
 
 	// TODO: dev1- method for increment to closest even number
 	public void incrementToEven() {
-		_ctr = -99;
+		if (_ctr % 2 != 0) {
+            _ctr++;
+        }
 	}
 
 	// TODO: dev1- method for decrement to closest even number
 	public void decrementToEven() {
-		_ctr = -99;
-	}
+		if (_ctr % 2 != 0) {
+            _ctr--;
+        }
 
 	// TODO: dev2- method for increment to closest prime number
 	public void incrementToPrime() {
