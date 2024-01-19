@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "name": "TestCounter",
+      "setup": "",
+      "run": "mvn -Dtest=TestCounter test --file pom.xml",
+      "input": "",
+      "output": "",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "TestFeature1",
+      "setup": "",
+      "run": "mvn -Dtest=TestFeature1 test --file pom.xml",
+      "input": "",
+      "output": "",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "TestFeature2",
+      "setup": "",
+      "run": "mvn -Dtest=TestFeature2 test --file pom.xml",
+      "input": "",
+      "output": "",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "TestFeature3",
+      "setup": "",
+      "run": "mvn -Dtest=TestFeature3 test --file pom.xml",
+      "input": "",
+      "output": "",
+      "timeout": 10,
+      "points": 1
+    }
+   ]
+}
