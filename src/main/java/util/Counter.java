@@ -42,22 +42,62 @@ public class Counter {
         }
 	}
 
-	// TODO: dev2- method for increment to closest prime number
-	public void incrementToPrime() {
-		_ctr = -99;
-	}
+	
+   // method for increment to closest prime number
+    public void incrementToPrime() {
+        _ctr = getNextPrime(_ctr);
+    }
 
-	// TODO: dev2- method for decrement to closest prime number
-	public void decrementToPrime() {
-		_ctr = -99;
-	}
+    // method for decrement to closest prime number
+    public void decrementToPrime() {
+        _ctr = getPreviousPrime(_ctr);
+    }
 
-	// TODO: dev3- count the frequency of word in sentence,
-	// refactor source code from dev1 and dev2
-	public void countFrequency(String word, String sentence) {
-		_ctr = -99;
-	}
+    // count the frequency of word in sentence
+    public void countFrequency(String word, String sentence) {
+        StringTokenizer tokenizer = new StringTokenizer(sentence);
+        int frequency = 0;
 
+        while (tokenizer.hasMoreTokens()) {
+            if (tokenizer.nextToken().equalsIgnoreCase(word)) {
+                frequency++;
+            }
+        }
+
+        _ctr = frequency;
+    }
+
+    // Helper method to check if a number is prime
+    private boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Helper method to get the next prime number
+    private int getNextPrime(int num) {
+        int nextNum = num + 1;
+        while (!isPrime(nextNum)) {
+            nextNum++;
+        }
+        return nextNum;
+    }
+
+    // Helper method to get the previous prime number
+    private int getPreviousPrime(int num) {
+        int prevNum = num - 1;
+        while (!isPrime(prevNum)) {
+            prevNum--;
+        }
+        return prevNum;
+    }
+}
 	
 
-}
+
