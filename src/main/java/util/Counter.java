@@ -40,12 +40,12 @@ public class Counter {
 
 	// TODO: dev2- method for increment to closest prime number
 	public void incrementToPrime() {
-		_ctr = -99;
+		_ctr = getNextPrime(_ctr);
 	}
 
 	// TODO: dev2- method for decrement to closest prime number
 	public void decrementToPrime() {
-		_ctr = -99;
+		_ctr = getPreviousPrime(_ctr);
 	}
 
 	// TODO: dev3- count the frequency of word in sentence,
